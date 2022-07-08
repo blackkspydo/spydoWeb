@@ -1,2 +1,9 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+    import Header from "../components/Header.svelte";
+    import Cards from "../components/Cards.svelte";
+
+</script>
+<Header />
+<Cards/>
+
+
