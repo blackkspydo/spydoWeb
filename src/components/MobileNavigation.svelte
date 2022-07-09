@@ -33,6 +33,7 @@
 		background: none;
 		border: none;
 		z-index: 10;
+		padding: 25px 0;
 		span {
 			display: block;
 			background: black;

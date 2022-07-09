@@ -2,32 +2,32 @@ import type { data } from './data.d';
 export const social: data[] = [
 	{
 		name: 'Github',
-		value: 'https://github.com/blackkspydo',
+		value: 'github.com/blackkspydo',
 		url: 'https://github.com/blackkspydo'
 	},
 	{
 		name: 'Twitter',
-		value: 'https://twitter.com/_blackkspydo',
+		value: 'twitter.com/_blackkspydo',
 		url: 'https://twitter.com/_blackkspydo'
 	},
 	{
 		name: 'Telegram',
-		value: 'https://t.me/blackkspydo',
+		value: 't.me/blackkspydo',
 		url: 'https://t.me/blackkspydo'
 	},
 	{
 		name: 'Codepen',
-		value: 'https://codepen.io/blackkspydo/',
+		value: 'codepen.io/blackkspydo/',
 		url: 'https://codepen.io/blackkspydo/'
 	},
 	{
 		name: 'Instagram',
-		value: 'https://instagram.com/blackkspydo',
+		value: 'instagram.com/blackkspydo',
 		url: 'https://instagram.com/blackkspydo/'
 	},
 	{
 		name: 'LinkedIn',
-		value: 'https://linkedin.com/in/blackkspydo',
+		value: 'linkedin.com/in/blackkspydo',
 		url: 'https://linkedin.com/in/blackkspydo/'
 	},
 	{

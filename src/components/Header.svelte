@@ -25,6 +25,8 @@
 		a {
 			text-decoration: none;
 			color: #000;
+            position:  relative;
+            z-index: 10;
 		}
 	}
 </style>
