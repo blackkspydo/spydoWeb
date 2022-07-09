@@ -86,7 +86,7 @@
 	.circle {
 		right: -60px;
 		width: 661px;
-		height: 820px;
+		height: 900px;
 		display: grid;
 		place-items: baseline end;
 		position: relative;
