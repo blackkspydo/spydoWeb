@@ -40,12 +40,12 @@ export const social: data[] = [
 export const personalInfo: data[] = [
 	{
 		name: 'pseudoname',
-		value: 'Blackk'
+		value: 'Blackk Spydo'
 	},
 
 	{
-		name: 'lastname',
-		value: 'Spydo'
+		name: 'realname',
+		value: 'Kishor Upadhyaya'
 	},
 
 	{
@@ -62,8 +62,8 @@ export const personalInfo: data[] = [
 		value: ['Breathing', 'Coding', 'Existing', 'Hiding dead bodies']
 	},
 	{
-		name: 'State',
-		value: 'Mars'
+		name: 'address',
+		value: 'Airy-0, Mars'
 	},
 	{
 		name: 'Fun Fact',
