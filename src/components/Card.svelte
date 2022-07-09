@@ -22,7 +22,7 @@
 		{`{`}
 		<ul>
 			{#if data.length >= 1}
-				{#each data as item}
+				{#each data as item, i}
 					<li>
 						{#if item.url}
 							<span class="blue">{item.name}</span> :
@@ -35,7 +35,9 @@
 								href={item.url}
 							>
 								<span class="green">"{item.value}"</span></a
-							>,
+							>{#if i < data.length - 1}
+								<span class="white">,</span>
+							{/if}
 						{:else}
 							<span class="blue">{item.name}</span> :
 							<span class="green">
@@ -53,9 +55,11 @@
 								{:else}
 									<span class="green">
 										"{item.value}"
-									</span>
+									</span>{#if i < data.length - 1}
+										<span class="white">,</span>
+									{/if}
 								{/if}
-							</span>,
+							</span>
 						{/if}
 					</li>
 				{/each}
@@ -108,6 +112,7 @@
 		transition: 0.5s all ease-in-out;
 		opacity: 0;
 		cursor: pointer;
+		z-index: 3;
 		.header {
 			width: 100%;
 			display: flex;
