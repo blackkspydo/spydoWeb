@@ -7,7 +7,8 @@
 	export let onClick = () => {
 		console.log('clicked');
 	};
-	export let hovered = false;
+	let hovered = false;
+	export let comment = '';
 	export const isArray = (value: any): value is any[] => Array.isArray(value);
 </script>
 
@@ -68,6 +69,9 @@
 			{/if}
 		</ul>
 		{`}`}
+		{#if comment}
+			<span class="gray">//{comment}</span>
+		{/if}
 	</div>
 </div>
 

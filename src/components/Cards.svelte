@@ -1,30 +1,41 @@
 <script lang="ts">
 	import Card from './Card.svelte';
-	import { skills, social, personalInfo } from '../store/data';
+	import { skills, social, personalInfo, projects, experience } from '../store/data';
 	const cardData = [
 		{
 			id: 0,
 			data: personalInfo,
 			title: 'Person',
-			state: 'active'
+			state: 'active',
+			comment: ''
 		},
 		{
 			id: 1,
 			title: 'Skills',
 			data: skills,
-			state: 'followed'
+			state: 'followed',
+			comment: "And that's just the tip of the iceberg"
 		},
 		{
 			id: 2,
 			title: 'SocialLinks',
 			data: social,
-			state: ''
+			state: '',
+			comment: ''
 		},
 		{
 			id: 3,
-			title: 'SocialLinks2',
-			data: social,
-			state: ''
+			title: 'Projects',
+			data: projects,
+			state: '',
+			comment: ''
+		},
+		{
+			id: 4,
+			title: 'Experience',
+			data: experience,
+			state: '',
+			comment: ''
 		}
 	];
 	const handleCardChange = (id: number) => {
@@ -48,6 +59,7 @@
 			onClick={() => {
 				handleCardChange(card.id);
 			}}
+			comment={card.comment}
 		/>
 	{/each}
 </div>

@@ -1,34 +1,43 @@
-import type {data } from './data.d';
+import type { data } from './data.d';
 export const social: data[] = [
 	{
 		name: 'Github',
 		value: 'https://github.com/blackkspydo',
-		url: 'https://github.com/blackkspydo',
-			
+		url: 'https://github.com/blackkspydo'
 	},
 	{
 		name: 'Twitter',
 		value: 'https://twitter.com/_blackkspydo',
-		url: 'https://twitter.com/_blackkspydo',
+		url: 'https://twitter.com/_blackkspydo'
+	},
+	{
+		name: 'Telegram',
+		value: 'https://t.me/blackkspydo',
+		url: 'https://t.me/blackkspydo'
+	},
+	{
+		name: 'Codepen',
+		value: 'https://codepen.io/blackkspydo/',
+		url: 'https://codepen.io/blackkspydo/'
 	},
 	{
 		name: 'Instagram',
 		value: 'https://instagram.com/blackkspydo',
-		url: 'https://instagram.com/blackkspydo/',
+		url: 'https://instagram.com/blackkspydo/'
 	},
 	{
 		name: 'LinkedIn',
 		value: 'https://linkedin.com/in/blackkspydo',
-		url: 'https://linkedin.com/in/blackkspydo/',
+		url: 'https://linkedin.com/in/blackkspydo/'
 	},
 	{
 		name: 'Email',
 		value: 'work@blackkspydo.com',
-		url: 'mailto:work@blackkspydo.com',
+		url: 'mailto:work@blackkspydo.com'
 	}
 ];
 
-export const personalInfo : data[] = [
+export const personalInfo: data[] = [
 	{
 		name: 'pseudoname',
 		value: 'Blackk'
@@ -51,6 +60,14 @@ export const personalInfo : data[] = [
 	{
 		name: 'hobbies',
 		value: ['Breathing', 'Coding', 'Existing', 'Hiding dead bodies']
+	},
+	{
+		name: 'State',
+		value: 'Mars'
+	},
+	{
+		name: 'Fun Fact',
+		value: '01101100 01101111 01101100'
 	}
 ];
 
@@ -117,5 +134,42 @@ export const skills: data[] = [
 	{
 		name: 'Life',
 		value: 'Beginner'
+	}
+];
+
+export const projects: data[] = [
+	{
+		name: 'Tinify.pro',
+		url: 'https://tinify.pro/',
+		value:
+			'Tinify.pro is a free online image compression service. It compresses images and gifs, and allows you to download them as a zip file.'
+	},
+	{
+		name: 'IKM Portfolio',
+		url: 'https://ikmaharaj.netlify.app',
+		value: 'This is portfolio website for a client. It is a static website built with GatsbyJs.'
+	},
+	{
+		name: 'KE School Website',
+		url: 'https://keschool.edu.np',
+		value: 'website for a school. It is a static website built with Wordpress custom theme.'
+	},
+	{
+		name: 'Mja Marketing ',
+		url: 'https://www.marketingbymja.co.uk',
+		value:
+			'website for a marketing company. It is a static website built with Wordpress custom theme.'
+	}
+];
+
+export const experience: data[] = [
+	{
+		name: '2022 Apr - Present',
+		value: 'FrontEnd Er. @Grambell',
+		url: 'https://www.grambell.com/'
+	},
+	{
+		name: '2021 Sept - 2022 Apr',
+		value: ['tinify.pro', 'IKM', 'KE School', 'Mja Marketing']
 	}
 ];
