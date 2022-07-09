@@ -66,7 +66,7 @@ export const personalInfo: data[] = [
 		value: 'Airy-0, Mars'
 	},
 	{
-		name: 'Fun Fact',
+		name: 'fun fact',
 		value: '01101100 01101111 01101100'
 	}
 ];

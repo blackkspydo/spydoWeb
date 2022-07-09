@@ -10,21 +10,20 @@
 	<span />
 	<span />
 </button>
-{#if isOpen}
-	<nav>
-		<button on:click={navHandler} class="close">
-			<span />
-			<span /></button
-		>
-		<ul>
-			{#each navigation as item}
-				<li>
-					<a href={item.url}>{item.name}</a>
-				</li>
-			{/each}
-		</ul>
-	</nav>
-{/if}
+
+<nav class:active={isOpen}>
+	<button on:click={navHandler} class="close">
+		<span />
+		<span /></button
+	>
+	<ul>
+		{#each navigation as item}
+			<li>
+				<a href={item.url}>{item.name}</a>
+			</li>
+		{/each}
+	</ul>
+</nav>
 
 <style type="scss">
 	@import '../scss/mixins.scss';
@@ -70,6 +69,9 @@
 			width: 45px;
 		}
 	}
+	.active {
+		margin-right: 0 !important ;
+	}
 	nav {
 		position: fixed;
 		top: 0;
@@ -83,7 +85,8 @@
 		flex-direction: column;
 		justify-content: flex-start;
 		align-items: flex-start;
-		transition: all 0.5s;
+		margin-right: -500px;
+		transition: all 0.3s ease-out;
 	}
 	ul {
 		margin-top: 50px;

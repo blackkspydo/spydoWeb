@@ -16,7 +16,7 @@
 		},
 		{
 			tooltip: 'Twitter',
-			icon: 'bxl:linkedin-square',
+			icon: 'bxl:twitter',
 			url: 'https://twitter.com/blackkspydo'
 		},
 		{
@@ -25,8 +25,8 @@
 			url: 'https://github.com/blackkspydo'
 		},
 		{
-			tooltip: 'Twitter',
-			icon: 'bxl:twitter',
+			tooltip: 'LinkedIn',
+			icon: 'bxl:linkedin-square',
 			url: 'https://www.linkedin.com/in/blackkspydo/'
 		}
 	];
