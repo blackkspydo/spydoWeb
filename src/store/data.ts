@@ -75,10 +75,6 @@ export const navigation = [
 
 export const skills: data[] = [
 	{
-		name: 'HTML',
-		value: 'Expert'
-	},
-	{
 		name: 'CSS',
 		value: 'Expert'
 	},
@@ -92,6 +88,18 @@ export const skills: data[] = [
 	},
 	{
 		name: 'NodeJs',
+		value: 'Intermediate'
+	},
+	{
+		name: 'Svelte',
+		value: 'Intermediate'
+	},
+	{
+		name: 'GatsbyJs',
+		value: 'Intermediate'
+	},
+	{
+		name: 'NextJs',
 		value: 'Intermediate'
 	},
 	{
