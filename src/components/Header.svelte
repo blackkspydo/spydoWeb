@@ -17,7 +17,7 @@
 		align-items: center;
 		width: 90%;
 		margin: 0 auto;
-		position: absolute;
+		position: relative;
 		top: 30px;
 		left: 0;
 		right: 0;

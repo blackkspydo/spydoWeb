@@ -7,7 +7,7 @@
 
 <Header />
 <main class="flex">
-	<Cards  />
+	<Cards />
 	<Circle />
 </main>
 <Footer />
@@ -17,6 +17,9 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		max-width: 1700px;
+		margin-left: auto;
+		padding-top: 3.5rem;
 	}
 	@media (max-width: 1150px) {
 		.flex {
