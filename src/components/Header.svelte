@@ -16,22 +16,32 @@
 		justify-content: space-between;
 		align-items: center;
 		width: 90%;
-		margin: 0 auto;
+
 		position: relative;
 		top: 30px;
-		left: 0;
+
 		right: 0;
 
 		a {
 			text-decoration: none;
 			color: #000;
-            position:  relative;
-            z-index: 10;
+			position: relative;
+			z-index: 10;
 		}
 	}
 	@media (max-width: 552px) {
 		.flex-container {
 			top: 20px;
+			margin: 0 auto;
+			left: 0;
+		}
+	}
+	@media (min-width: 552px) {
+		.flex-container {
+			max-width: min(1000px,calc(100% - 700px));
+			margin-right: auto;
+			justify-content: space-between;
+			left: 5%;
 		}
 	}
 </style>
