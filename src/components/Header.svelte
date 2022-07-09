@@ -29,4 +29,9 @@
             z-index: 10;
 		}
 	}
+	@media (max-width: 552px) {
+		.flex-container {
+			top: 20px;
+		}
+	}
 </style>
