@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Card from './Card.svelte';
 	import { skills, social, personalInfo } from '../store/data';
-	export const cardData = [
+	const cardData = [
 		{
 			id: 0,
 			data: personalInfo,
@@ -18,16 +18,16 @@
 			id: 2,
 			title: 'SocialLinks',
 			data: social,
-			state: 'inactive'
+			state: ''
 		},
 		{
 			id: 3,
 			title: 'SocialLinks2',
 			data: social,
-			state: 'inactive'
+			state: ''
 		}
 	];
-	export const handleCardChange = (id: number) => {
+	const handleCardChange = (id: number) => {
 		cardData.forEach((item, i) => {
 			if (item.id === id) {
 				item.state = 'inactive';
@@ -36,9 +36,10 @@
 			}
 		});
 	};
+	export let classname = '';
 </script>
 
-<div class="cards">
+<div class="cards {classname}">
 	{#each cardData as card, index}
 		<Card
 			data={card.data}
@@ -52,13 +53,21 @@
 </div>
 
 <style type="scss">
-    @import "../scss/mixins.scss";
-    @import "../scss/variables.scss";
+	@import '../scss/mixins.scss';
+	@import '../scss/variables.scss';
 	.cards {
-        height: 410px;
-		width: 580px;
+		height: 410px;
+		max-width: 580px;
 		position: relative;
 		top: toRem(-100);
-        left: toRem(30);
+		left: toRem(30);
+		width: min(589px, 90%);
+	}
+	@media (max-width: 1150px) {
+		.cards {
+			margin: 0 auto;
+			left: -1%;
+			order: 2;
+		}
 	}
 </style>

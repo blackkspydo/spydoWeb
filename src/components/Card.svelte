@@ -92,8 +92,8 @@
 		}
 	}
 	.card {
-		// width: toRem(589);
-		width: clamp(toRem(589), 90%, toRem(400));
+		// width: clamp(toRem(550), 90%, toRem(300));
+		width: min(toRem(550), 90vw);
 		max-width: toRem(589);
 		min-height: toRem(300);
 		background: #2a2a32;
@@ -156,7 +156,7 @@
 						font-family: 'Roboto Mono', monospace;
 						font-size: toRem(16);
 						font-weight: 300;
-						pointer-events: auto;
+
 						&:hover {
 							span {
 								color: $blue2 !important;

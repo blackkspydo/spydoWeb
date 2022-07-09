@@ -11,8 +11,53 @@
 	import wordpress from '../assets/wordpress.svg';
 	import profile from '../assets/profile.jpg';
 
-	export const innerPlanets = [python, svelte, typescript, nodejs, mongodb];
-	export const outerPlanets = [nextjs, react, wordpress, git, figma];
+	const innerPlanets = [python, svelte, typescript, nodejs, mongodb];
+	const inner = [
+		{
+			planet: python,
+			name: 'Python'
+		},
+		{
+			planet: svelte,
+			name: 'Svelte'
+		},
+		{
+			planet: typescript,
+			name: 'TypeScript'
+		},
+		{
+			planet: nodejs,
+			name: 'Node.js'
+		},
+		{
+			planet: mongodb,
+			name: 'MongoDB'
+		}
+	];
+
+	const outerPlanets = [nextjs, react, wordpress, git, figma];
+	const outer = [
+		{
+			planet: nextjs,
+			name: 'Next.js'
+		},
+		{
+			planet: react,
+			name: 'React'
+		},
+		{
+			planet: wordpress,
+			name: 'WordPress'
+		},
+		{
+			planet: git,
+			name: 'Git'
+		},
+		{
+			planet: figma,
+			name: 'Figma'
+		}
+	];
 </script>
 
 <div class="circle">
@@ -20,13 +65,19 @@
 		<img src={profile} alt="profile" />
 	</div>
 	<div class="ringCircle inner-planets">
-		{#each innerPlanets as planet}
-			<img class="planetCircle" src={planet} alt="" />
+		{#each inner as planet}
+			<div class="planetCircle">
+				<img src={planet.planet} alt="" />
+				<span class="tooltip">{planet.name}</span>
+			</div>
 		{/each}
 	</div>
 	<div class="ringCircle outer-planets">
-		{#each outerPlanets as planet}
-			<img class="planetCircle" src={planet} alt="" />
+		{#each outer as planet}
+			<div class="planetCircle">
+				<img src={planet.planet} alt="" />
+				<span class="tooltip">{planet.name}</span>
+			</div>
 		{/each}
 	</div>
 </div>
@@ -37,7 +88,7 @@
 	.circle {
 		right: -60px;
 		width: 920px;
-		height: 940px;
+		height: 920px;
 		display: grid;
 		place-items: baseline end;
 		.introImage {
@@ -82,6 +133,17 @@
 			justify-content: space-between;
 			align-items: center;
 			animation: wheel 10s linear infinite;
+			img {
+				width: 100%;
+				height: 100%;
+				border-radius: 50%;
+			}
+			&:hover {
+				animation-play-state: paused;
+				.planetCircle {
+					animation-play-state: paused;
+				}
+			}
 			.planetCircle {
 				width: toRem(46);
 				height: toRem(46);
@@ -95,6 +157,24 @@
 				box-shadow: 0px 0px 10px 1px rgba(43, 43, 43, 0.3);
 				animation: planets 10s linear infinite;
 				background-color: $white;
+				.tooltip {
+					position: absolute;
+					top: -30px;
+					left: 50%;
+					transform: translateX(-50%);
+					font-size: 11px;
+					font-weight: 300;
+					background: rgba(0, 0, 0, 0.833);
+					color: $white;
+					padding: 2px 5px;
+					border-radius: 5px;
+					opacity: 0;
+					transition: $transition;
+					z-index: 8;
+				}
+				&:hover .tooltip {
+					opacity: 1;
+				}
 				&:nth-child(1) {
 					top: 14%;
 					left: 0;
@@ -127,7 +207,36 @@
 			z-index: 1;
 			border-width: 1px;
 			animation: wheel2 20s linear infinite;
+			&:hover {
+				animation-play-state: paused;
+				.planetCircle {
+					animation-play-state: paused;
+				}
+			}
 			.planetCircle {
+				img {
+					width: 100%;
+					height: 100%;
+					border-radius: 50%;
+				}
+				.tooltip {
+					position: absolute;
+					top: -30px;
+					left: 50%;
+					transform: translateX(-50%);
+					font-size: 11px;
+					font-weight: 300;
+					background: rgba(0, 0, 0, 0.833);
+					color: $white;
+					padding: 2px 5px;
+					border-radius: 5px;
+					opacity: 0;
+					transition: $transition;
+					z-index: 8;
+				}
+				&:hover .tooltip {
+					opacity: 1;
+				}
 				width: toRem(46);
 				height: toRem(46);
 				margin: toRem(10);
@@ -146,22 +255,22 @@
 					margin-left: -16.5px;
 				}
 				&:nth-child(2) {
-					top: -3%;
+					top: -11%;
 					left: 25%;
 					margin-left: -26.5px;
 				}
 				&:nth-child(3) {
-					top: 27%;
+					top: -18%;
 					left: 76.5%;
 					margin-right: 16.5px;
 				}
 				&:nth-child(4) {
-					top: 91%;
-					left: 0;
+					top: 31%;
+					left: 87.5%;
 					margin-left: 16.5px;
 				}
 				&:nth-child(5) {
-					top: 70%;
+					top: 48%;
 					left: 48%;
 					margin-left: -16.5px;
 				}
