@@ -23,6 +23,8 @@ ul{
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    position: relative;
+    z-index: 5;
     li{
         list-style: none;
         a{
