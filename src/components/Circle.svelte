@@ -11,7 +11,6 @@
 	import wordpress from '../assets/wordpress.svg';
 	import profile from '../assets/profile.jpg';
 
-	const innerPlanets = [python, svelte, typescript, nodejs, mongodb];
 	const inner = [
 		{
 			planet: python,
@@ -35,7 +34,6 @@
 		}
 	];
 
-	const outerPlanets = [nextjs, react, wordpress, git, figma];
 	const outer = [
 		{
 			planet: nextjs,
@@ -87,12 +85,13 @@
 	@import '../scss/variables.scss';
 	.circle {
 		right: -60px;
-		width: 920px;
-		height: 920px;
+		width: 661px;
+		height: 820px;
 		display: grid;
 		place-items: baseline end;
+		position: relative;
 		.introImage {
-			position: relative;
+			position: absolute;
 			z-index: 3;
 			max-width: 100%;
 			max-width: 500px;
@@ -150,7 +149,7 @@
 				margin: toRem(10);
 				border-radius: 50%;
 				padding: toRem(3);
-				position: relative;
+				position: absolute;
 				z-index: 2;
 				transform-origin: center;
 				border-radius: 50%;
@@ -176,29 +175,24 @@
 					opacity: 1;
 				}
 				&:nth-child(1) {
-					top: 14%;
-					left: 0;
-					margin-left: -16.5px;
+					top: 29%;
+					left: -5%;
 				}
 				&:nth-child(2) {
-					top: 43%;
-					left: 2%;
-					margin-left: 0;
+					top: 83%;
+					left: 14%;
 				}
 				&:nth-child(3) {
-					top: 27%;
+					top: -6.5%;
 					left: 43.5%;
-					margin-right: 16.5px;
 				}
 				&:nth-child(4) {
-					top: -44%;
-					left: 0;
-					margin-left: 16.5px;
+					top: 17%;
+					left: 86%;
 				}
 				&:nth-child(5) {
-					top: -46.5%;
-					left: -62%;
-					margin-left: -16.5px;
+					top: 75.5%;
+					right: 5%;
 				}
 			}
 		}
@@ -242,7 +236,7 @@
 				margin: toRem(10);
 				border-radius: 50%;
 				padding: toRem(3);
-				position: relative;
+				position: absolute;
 				z-index: 2;
 				transform-origin: center;
 				border-radius: 50%;
@@ -251,28 +245,23 @@
 				background-color: $white;
 				&:nth-child(1) {
 					top: 50%;
-					left: 0;
-					margin-left: -16.5px;
+					left: -6%;
 				}
 				&:nth-child(2) {
-					top: -11%;
-					left: 25%;
-					margin-left: -26.5px;
+					top: 5%;
+					left: 11%;
 				}
 				&:nth-child(3) {
-					top: -18%;
-					left: 76.5%;
-					margin-right: 16.5px;
+					top: 4%;
+					left: 74%;
 				}
 				&:nth-child(4) {
-					top: 31%;
-					left: 87.5%;
-					margin-left: 16.5px;
+					top: 57%;
+					left: 91.5%;
 				}
 				&:nth-child(5) {
-					top: 48%;
-					left: 48%;
-					margin-left: -16.5px;
+					bottom: -6.5%;
+					left: 47%;
 				}
 			}
 		}
@@ -302,6 +291,11 @@
 
 		to {
 			transform: rotateZ(-360deg);
+		}
+	}
+	@media (max-width: 552px) {
+		.circle {
+			pointer-events: none;
 		}
 	}
 </style>

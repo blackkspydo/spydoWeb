@@ -80,6 +80,7 @@
 			margin: 0 auto;
 			left: -1%;
 			order: 2;
+			margin-bottom: 4rem;
 		}
 	}
 </style>

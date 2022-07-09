@@ -20,6 +20,7 @@
 		max-width: 1700px;
 		margin-left: auto;
 		padding-top: 3.5rem;
+        overflow-x: clip;
 	}
 	@media (max-width: 1150px) {
 		.flex {

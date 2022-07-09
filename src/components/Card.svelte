@@ -203,10 +203,22 @@
 		height: 200px !important;
 		transform: rotate(5deg);
 		transform-origin: right bottom;
+		.content {
+			.green,
+			.blue {
+				color: white;
+			}
+		}
 	}
 	.inactive {
 		animation: falldown 1s ease-in-out;
 		transform-origin: right bottom;
+		.content {
+			.green,
+			.blue {
+				color: white;
+			}
+		}
 	}
 	@keyframes falldown {
 		0% {
