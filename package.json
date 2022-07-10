@@ -31,5 +31,8 @@
 		"typescript": "^4.7.2",
 		"vite": "^2.9.13"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"svelte-gestures": "^1.4.1"
+	}
 }

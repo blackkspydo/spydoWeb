@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { each } from 'svelte/internal';
+	import { swipe } from 'svelte-gestures';
 	import type { data as dataType } from '../store/data.d';
 	export let data: dataType[] = [];
 	export let classname = '';
@@ -12,7 +13,12 @@
 	export const isArray = (value: any): value is any[] => Array.isArray(value);
 </script>
 
-<div class="card {classname}" on:click={() => !hovered && onClick()}>
+<div
+	class="card {classname}"
+	on:click={() => !hovered && onClick()}
+	use:swipe={{ timeframe: 100, minSwipeDistance: 20, touchAction: 'pan-y' }}
+	on:swipe={() => onClick()}
+>
 	<div class="header">
 		<span class="buttons" />
 		<span class="buttons" />
