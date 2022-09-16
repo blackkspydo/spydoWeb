@@ -87,6 +87,10 @@ export const navigation = [
 	{
 		name: 'Github',
 		url: 'https://github.com/blackkspydo'
+	},
+	{
+		name: 'Blogs',
+		url: 'https://blackkspydo.medium.com/'
 	}
 ];
 
